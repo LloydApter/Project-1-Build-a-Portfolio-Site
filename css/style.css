@@ -1,0 +1,179 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 300;
+}
+h2 {
+  font-size: 2.5em;
+  font-weight: 250;
+}
+
+h3 {
+  font-size: 2em;
+  font-weight: 200;
+}
+
+h4 {
+  font-size: 1.5em;
+  font-weight: 150;
+}
+
+h5 {
+  font-size: 1em;
+  font-weight: 100;
+}
+
+
+
+.img, embed, object, video {
+  max-width: 100%;
+}
+
+hr {
+  align-self: center;
+  height: 5px;
+  border: none;
+  color: #7d97ad;
+  background-color: #7d97ad;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0;
+
+}
+.home {
+  display: grid;
+  justify-content: center;
+  justify-items: center;	
+  max-width: 1000px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: auto;	
+  grid-template-rows: [header-start] 200px [header-end main-start] 400px [main-end heading-start] 100px [heading-end portfolios-start] 300px [portfolios-end]; 
+}
+.header {
+  grid-row: header-start / header-end;
+  display: grid;
+  grid-template-columns: [logo-start] 1fr [logo-end title-start] 1fr [title-end];
+  width: 100%;
+  max-height: 200px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header_logo {
+  display: flex;
+  grid-column: logo-start / logo-end;
+  grid-row: 1;
+  width: 100%;
+  max-height: 200px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header_title {
+  grid-column: title-start / title-end;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: title-start / title-end;
+  grid-template-rows: [name-start] 2fr [name-end tagline-start] 1fr [tagline-end];
+  width: 100%;
+  max-height: 200px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header_name { 
+  display: flex;
+  align-self: auto; 
+  flex-flow: row;
+  flex-wrap: nowrap;
+  justify-self: end;
+  max-height: 100px;
+  grid-column: 2;
+  grid-row: name-start / name-end;
+}
+.header_tagline {
+  display: flex;
+  align-self: auto; 
+  flex-flow: row;
+  flex-wrap: nowrap;
+  justify-self: end;
+  max-height: 100px;
+  grid-column: 2;
+  grid-row: tagline-start / tagline-end;
+}
+
+.main {
+  grid-row: main-start / main-end;
+  width: 100%;
+  max-height: 400px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+
+.heading {
+  grid-row: heading-start / heading-end;
+  align-self: auto; 
+  max-height: 100px;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  color: #7d97ad;
+}
+
+.portfolios {
+  display: grid;
+  grid-column: auto;
+  grid-row: portfolios-start / portfolios-end;
+  justify-self: center;
+}
+
+.portfolio {
+  flex: 0 1 auto;
+  align-self: stretch;
+  display: grid;
+  max-height: 400px;
+  grid-template-rows: [portfolio-image-start] 4fr [portfolio-image-end portfolio-title-start] 1fr [portfolio-title-end portfolio-text-start] 1fr [portfolio-text-end];
+}
+
+.portfolio_image {
+  grid-row: portfolio-image-start / portfolio-image-end;
+  max-width: 100%;
+  align-items: center;
+  justify-self: center;
+  justify-content: center;
+  padding: 5%;
+  height: 100%;
+  max-height: 200px;
+
+  
+}
+
+.portfolio_title {
+  grid-row: portfolio-title-start / portfolio-title-end;
+  justify-self: center;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  max-height: 100px;
+
+
+}
+.portfolio_text {
+  grid-row: portfolio-text-start / portfolio-text-end;
+  justify-self: center;
+  max-height: 100px;
+
+}

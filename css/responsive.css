@@ -1,0 +1,33 @@
+/* Medium screens */
+@media all and (min-width: 600px) {
+  /* We tell header items and articles to each share a row */
+  .home {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .portfolios { flex-direction: column; }
+
+/* Large screens */
+@media all and (min-width: 1000px) {
+  /* We arrange the order according to the PDF layout
+   * And tell the main element to take twice as much width as the other two sidebars 
+   */
+   .home {
+    margin-left: auto;
+    margin-right: auto;
+  }
+   .portfolios { flex-direction: row; }
+
+ }
+
+ .container {
+ width: 100%;
+ display: flex;
+ flex-wrap: wrap;
+ }
+ .box { width: 150px;
+ }
+
+ img {
+ max-width: 100%;
+ }
